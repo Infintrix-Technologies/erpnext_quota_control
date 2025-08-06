@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:site_name",
+ "creation": "2025-08-06 19:38:02.912763",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "site_name",
+  "quota"
+ ],
+ "fields": [
+  {
+   "fieldname": "site_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Site Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "{\n  \"active_users\": 1,\n  \"company\": 2,\n  \"count_administrator_user\": 0,\n  \"count_website_users\": 0,\n  \"db_space\": 0,\n  \"document_limit\": {\n   \"Journal Entry\": {\n    \"limit\": 10,\n    \"period\": \"Monthly\"\n   },\n   \"Payment Entry\": {\n    \"limit\": 10,\n    \"period\": \"Monthly\"\n   },\n   \"Purchase Invoice\": {\n    \"limit\": 10,\n    \"period\": \"Weekly\"\n   },\n   \"Sales Invoice\": {\n    \"limit\": 10,\n    \"period\": \"Daily\"\n   }\n  },\n  \"space\": 0,\n  \"used_company\": 1,\n  \"users\": 5,\n  \"valid_till\": \"2025-08-20\"\n }",
+   "fieldname": "quota",
+   "fieldtype": "JSON",
+   "in_list_view": 1,
+   "label": "Quota",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-06 19:43:57.418172",
+ "modified_by": "Administrator",
+ "module": "ERPNext Quota Control",
+ "name": "ERPNext Site",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
