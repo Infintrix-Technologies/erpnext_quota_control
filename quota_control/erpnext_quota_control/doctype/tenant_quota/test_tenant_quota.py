@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestERPNextSite(FrappeTestCase):
+class TestTenantQuota(FrappeTestCase):
 	pass

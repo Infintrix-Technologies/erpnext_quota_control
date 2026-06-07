@@ -1,0 +1,210 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:site_name",
+ "creation": "2025-08-06 19:38:02.912763",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "site_name",
+  "site_url",
+  "sb_basic",
+  "users",
+  "active_users",
+  "count_administrator_user",
+  "count_website_users",
+  "sb_storage",
+  "space",
+  "used_space",
+  "private_files_size",
+  "public_files_size",
+  "backup_files_size",
+  "sb_database",
+  "db_space",
+  "used_db_space",
+  "sb_company",
+  "max_companies",
+  "used_companies",
+  "sb_validity",
+  "valid_till",
+  "sb_document_limit",
+  "document_limit"
+ ],
+ "fields": [
+  {
+   "fieldname": "site_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Site Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "site_url",
+   "fieldtype": "Data",
+   "label": "Site URL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sb_basic",
+   "fieldtype": "Section Break",
+   "label": "User Limits"
+  },
+  {
+   "default": "5",
+   "fieldname": "users",
+   "fieldtype": "Int",
+   "label": "Max Users"
+  },
+  {
+   "default": "0",
+   "fieldname": "active_users",
+   "fieldtype": "Int",
+   "label": "Active Users",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "count_administrator_user",
+   "fieldtype": "Check",
+   "label": "Count Administrator User"
+  },
+  {
+   "default": "0",
+   "fieldname": "count_website_users",
+   "fieldtype": "Check",
+   "label": "Count Website Users"
+  },
+  {
+   "fieldname": "sb_storage",
+   "fieldtype": "Section Break",
+   "label": "Storage Limits"
+  },
+  {
+   "default": "0",
+   "fieldname": "space",
+   "fieldtype": "Int",
+   "label": "Max Space (MB)"
+  },
+  {
+   "default": "0",
+   "fieldname": "used_space",
+   "fieldtype": "Int",
+   "label": "Used Space (MB)",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "private_files_size",
+   "fieldtype": "Int",
+   "label": "Private Files Size (MB)",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "public_files_size",
+   "fieldtype": "Int",
+   "label": "Public Files Size (MB)",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "backup_files_size",
+   "fieldtype": "Int",
+   "label": "Backup Files Size (MB)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_database",
+   "fieldtype": "Section Break",
+   "label": "Database Limits"
+  },
+  {
+   "default": "0",
+   "fieldname": "db_space",
+   "fieldtype": "Int",
+   "label": "Max Database Space (MB)"
+  },
+  {
+   "default": "0",
+   "fieldname": "used_db_space",
+   "fieldtype": "Int",
+   "label": "Used Database Space (MB)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_company",
+   "fieldtype": "Section Break",
+   "label": "Company Limits"
+  },
+  {
+   "default": "2",
+   "fieldname": "max_companies",
+   "fieldtype": "Int",
+   "label": "Max Companies"
+  },
+  {
+   "default": "1",
+   "fieldname": "used_companies",
+   "fieldtype": "Int",
+   "label": "Used Companies",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_validity",
+   "fieldtype": "Section Break",
+   "label": "Validity"
+  },
+  {
+   "fieldname": "valid_till",
+   "fieldtype": "Date",
+   "label": "Valid Till"
+  },
+  {
+   "fieldname": "sb_document_limit",
+   "fieldtype": "Section Break",
+   "label": "Document Limits"
+  },
+  {
+   "fieldname": "document_limit",
+   "fieldtype": "Table",
+   "label": "Document Limit",
+   "options": "Quota Document Limit"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-06 19:43:57.418172",
+ "modified_by": "Administrator",
+ "module": "ERPNext Quota Control",
+ "name": "Tenant Quota",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
